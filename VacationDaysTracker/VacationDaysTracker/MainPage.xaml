@@ -1,14 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:VacationDaysTracker"
              x:Class="VacationDaysTracker.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Starting Vacation Balance"/>
+            <Entry x:Name="startBalanceEntry"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Accrual Rate (Bi-Weekly)"/>
+            <Entry x:Name="accrualRateEntry"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Start Date"/>
+            <DatePicker x:Name="startDatePicker">
+
+            </DatePicker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="End Date"/>
+            <DatePicker x:Name="endDatePicker">
+
+            </DatePicker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Vacation Balance Date"/>
+            <DatePicker x:Name="vacationBalanceDatePicker">
+            </DatePicker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Vacation Balance at Selected Date:"/>
+            <Label x:Name="vacationBalanceLabel"/>
+        </StackLayout>
+        <Button x:Name="addVacation" Text="Add Vacation" Clicked="AddVacation_Clicked"/>
+        <Button x:Name="clearVacation" Text="Clear Vacations" Clicked="ClearVacation_Clicked"/>
+        <Button x:Name="calculateBalance" Text="Calculate Balance" Clicked="CalculateBalance_Clicked"/>
+        <ListView x:Name="VacationsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Start Date"/>
+                            <Label x:Name="lblStartDate" Text="{Binding VacationStart}"/>
+                            <Label Text="End Date"/>
+                            <Label x:Name="lblEndDate" Text="{Binding VacationEnd}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
+
 
 </ContentPage>
