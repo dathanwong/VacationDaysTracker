@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VacationDaysTracker.MainPage">
-
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
+             x:Class="VacationDaysTracker.NewPage">
+    <ContentPage.Content>
         <Grid BackgroundColor="Black" ColumnSpacing="10" RowSpacing="10" Grid.Row="0" Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -27,6 +21,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <Label Text="January" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"/>
             <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -34,49 +29,49 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" ColumnSpacing="10" RowSpacing="10" Grid.Row="1" Grid.Column="1">
+            <Grid BackgroundColor="White" ColumnSpacing="10" RowSpacing="10" Grid.Row="1" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" ColumnSpacing="10" RowSpacing="10" Grid.Row="1" Grid.Column="2">
+            <Grid BackgroundColor="White" ColumnSpacing="10" RowSpacing="10" Grid.Row="1" Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" Grid.Row="1" Grid.Column="3">
+            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" Grid.Row="1" Grid.Column="4">
+            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="4">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" Grid.Row="1" Grid.Column="5">
+            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" Grid.Row="1" Grid.Column="6">
+            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="6">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="Green" Grid.Row="2" Grid.Column="0">
+            <Grid BackgroundColor="White" Grid.Row="2" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -273,67 +268,5 @@
                 </Grid.RowDefinitions>
             </Grid>
         </Grid>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="0" Text="Sunday"/>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="1" Text="Monday"/>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="2" Text="Tuesday"/>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="3" Text="Wednesday"/>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="4" Text="Thursday"/>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="5" Text="Friday"/>
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="6" Text="Saturday"/>
-        <StackLayout Grid.Row="1" Grid.Column="0">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Starting Vacation Balance"/>
-                <Entry x:Name="startBalanceEntry"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Accrual Rate (Bi-Weekly)"/>
-                <Entry x:Name="accrualRateEntry"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Start Date"/>
-                <DatePicker x:Name="startDatePicker">
-
-                </DatePicker>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="End Date"/>
-                <DatePicker x:Name="endDatePicker">
-
-                </DatePicker>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Vacation Balance Date"/>
-                <DatePicker x:Name="vacationBalanceDatePicker">
-                </DatePicker>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Vacation Balance at Selected Date:"/>
-                <Label x:Name="vacationBalanceLabel"/>
-            </StackLayout>
-
-
-            <Button x:Name="addVacation" Text="Add Vacation" Clicked="AddVacation_Clicked"/>
-            <Button x:Name="clearVacation" Text="Clear Vacations" Clicked="ClearVacation_Clicked"/>
-            <Button x:Name="calculateBalance" Text="Calculate Balance" Clicked="CalculateBalance_Clicked"/>
-            <Button x:Name="nextPageButton" Text="Next Page" Clicked="NextPageButton_Clicked"/>
-            <ListView x:Name="VacationsListView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Start Date"/>
-                                <Label x:Name="lblStartDate" Text="{Binding VacationStart}"/>
-                                <Label Text="End Date"/>
-                                <Label x:Name="lblEndDate" Text="{Binding VacationEnd}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </StackLayout>
-    </Grid>
-    
-
-
+    </ContentPage.Content>
 </ContentPage>

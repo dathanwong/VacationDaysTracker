@@ -15,7 +15,7 @@ namespace VacationDaysTracker
 
 		public MainPage()
 		{
-			InitializeComponent();
+            InitializeComponent();
             //Establish SQLite Connection
             dataAccess = new DataAccess(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Vacations.db3"));
 		}
@@ -71,6 +71,11 @@ namespace VacationDaysTracker
                 calendar[i] = new Day(calendar[i-1].GetDate().AddDays(1), currentBalance, accrualRate);
             }
             return calendar;
+        }
+
+        private void NextPageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewPage());
         }
     }
 }
