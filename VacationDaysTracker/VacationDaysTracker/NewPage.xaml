@@ -6,6 +6,7 @@
         <Grid BackgroundColor="Black" ColumnSpacing="10" RowSpacing="10" Grid.Row="0" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -22,55 +23,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Text="January" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"/>
-            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid BackgroundColor="White" ColumnSpacing="10" RowSpacing="10" Grid.Row="1" Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid BackgroundColor="White" ColumnSpacing="10" RowSpacing="10" Grid.Row="1" Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="3">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="4">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="5">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid BackgroundColor="White" Grid.Row="1" Grid.Column="6">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
             <Grid BackgroundColor="White" Grid.Row="2" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -78,14 +30,14 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="White" Grid.Row="2" Grid.Column="1">
+            <Grid BackgroundColor="White" ColumnSpacing="10" RowSpacing="10" Grid.Row="2" Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid BackgroundColor="White" Grid.Row="2" Grid.Column="2">
+            <Grid BackgroundColor="White" ColumnSpacing="10" RowSpacing="10" Grid.Row="2" Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -267,6 +219,62 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid BackgroundColor="White" Grid.Row="6" Grid.Column="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="0" Text="Sunday"/>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="1" Text="Monday"/>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="2" Text="Tuesday"/>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="3" Text="Wednesday"/>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="4" Text="Thursday"/>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="5" Text="Friday"/>
+            <Label BackgroundColor="White" HorizontalTextAlignment="Center" FontSize="Medium" Grid.Row="1" Grid.Column="6" Text="Saturday"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
