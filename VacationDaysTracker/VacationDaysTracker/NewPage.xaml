@@ -22,7 +22,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Text="January" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"/>
+            <Button x:Name="previousMonthButton" Text="Previous Month" BackgroundColor="Gray" FontSize="Large" Grid.Row="0" Grid.Column="0" Clicked="PreviousMonthButton_Clicked"/>
+            <Label x:Name="monthLabel" Text="January" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" BackgroundColor="White" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5"/>
+            <Button x:Name="nextMonthButton" Text="Next Month" FontSize="Large" BackgroundColor="Gray" Grid.Row="0" Grid.Column="6" Clicked="NextMonthButton_Clicked"/>
             <Grid BackgroundColor="White" Grid.Row="2" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

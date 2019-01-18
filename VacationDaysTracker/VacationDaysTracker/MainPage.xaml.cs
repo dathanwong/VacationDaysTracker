@@ -48,8 +48,9 @@ namespace VacationDaysTracker
 
         private void CalculateBalance_Clicked(object sender, EventArgs e)
         {
-            Day[] calendar = CreateCalendar();
-            
+            //Day[] calendar = CreateCalendar();
+            LinkedList<Day> calendar = CreateCalendarList();
+            AddDays(calendar);
             //var test = CalculateBalanceAsync();
             //vacationBalanceLabel.Text = CalculateBalanceAsync().ToString();
         }
@@ -71,6 +72,37 @@ namespace VacationDaysTracker
                 calendar[i] = new Day(calendar[i-1].GetDate().AddDays(1), currentBalance, accrualRate);
             }
             return calendar;
+        }
+
+        //Create Linked List of Calendar Days
+        private LinkedList<Day> CreateCalendarList()
+        {
+            DateTime startDate = new DateTime(2019, 1, 1);
+            int startBalance = int.Parse(startBalanceEntry.Text);
+            int currentBalance = startBalance;
+            int accrualRate = int.Parse(accrualRateEntry.Text);
+            LinkedList<Day> days = new LinkedList<Day>();
+            Day firstDay = new Day(startDate, startBalance, accrualRate);
+            days.AddFirst(firstDay);
+            for(int i = 1; i < 500; i++)
+            {
+                currentBalance = days.ElementAt(i - 1).GetBalance();
+                days.AddLast(new Day(days.ElementAt(i - 1).GetDate().AddDays(1), currentBalance, accrualRate));
+            }
+            return days;
+        }
+
+        //Add days to the calendar linked list
+        private LinkedList<Day> AddDays(LinkedList<Day> list)
+        {
+            int accrualRate = int.Parse(accrualRateEntry.Text);
+            LinkedList<Day> days = list;
+            for(int i=0; i < 60; i++)
+            {
+                Day nextDay = new Day(days.Last().GetDate().AddDays(1), days.Last().GetBalance(), accrualRate);
+                days.AddLast(nextDay);
+            }
+            return days;
         }
 
         private void NextPageButton_Clicked(object sender, EventArgs e)
